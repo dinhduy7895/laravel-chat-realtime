@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="user_partner">
-        <h1 > {{$user_partner->username}}</h1>
+        <h1> {{$user_partner->username}}</h1>
     </div>
     <ul id="messages">
         @foreach ($messages as $message)
@@ -36,7 +36,7 @@
                             '_token': token,
                             'message': msg,
                             'user': user,
-                            'partner' : partner
+                            'partner': partner
                         },
                         success: function (data) {
                             console.log(1);
@@ -50,6 +50,7 @@
                     return false;
                 } else {
                     alert("Please Add Message.");
+                    return false;
                 }
 
             });
